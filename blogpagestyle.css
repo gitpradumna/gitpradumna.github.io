@@ -204,11 +204,60 @@ body{
     font-weight: 500;
   }
   .maindatetime{
+    line-height: 1.04rem;
+    /* text-align: center; */
     font-size: 1rem;
     color: #414141;
     text-align: left;
     color: var(--primary-color);
+    display:  flex;
+    gap: 0.85rem;
+    /* justify-content: center; */
+    max-width: 100%;
+    align-items: center;
+    cursor: pointer;
   }
+  .maintopic {
+    display: flex;
+    gap: 0.5rem;
+    height: 2rem;
+}
+.maintime:hover{
+  transform: scale(1.02);
+font-weight: 550;
+  color: var(--accent-color);
+}
+.mainauthorname:hover{
+  transform: scale(1.02);
+  /* box-shadow: 1px 1px 1px 1px black; */
+  /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.216); */
+  font-weight: 550;
+  color: var(--accent-color);
+}
+.topic1, .topic2 {
+
+  cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    color: #f3f3f7; /* This will be overridden by the next line */
+    font-weight: 700;
+    background-color: rgba(82, 81, 81, 0.846);
+    padding: 0 0.5rem;
+    border-radius: 0.85rem;
+     /* This line overrides the previous color */
+}
+.topic1:hover{
+  transform: scale(1.02);
+  background-color: black;
+  box-shadow: 1px 1px 1px 1px black;
+}
+.topic2:hover{
+  transform: scale(1.02);
+  background-color: black;
+  box-shadow: 1px 1px 1px 1px black;
+}
   .mainimagecontainer{
     width: 100%;
     display: flex;
