@@ -37,3 +37,17 @@ function scroll() {
         slide.style.transform = `translateX(-${cnt * 100}%)`;
     });
 }
+
+
+// email id click colour change
+let emailid = document.querySelector(".news-email");
+emailid.addEventListener('click', function(event) {
+    emailid.style = "border-color: #2563eb; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: 0s;";
+    event.stopPropagation(); 
+});
+
+document.addEventListener('click', function(event) {
+    if (!emailid.contains(event.target)) {
+        emailid.style = "";
+    }
+});
