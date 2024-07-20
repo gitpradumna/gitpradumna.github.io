@@ -341,6 +341,7 @@ body{
   gap: 1rem;
 }
 .prebtn{
+  cursor: pointer;
   height: 1.8rem;
   width: 3.2rem;
   background-color: var(--gray);
@@ -356,6 +357,7 @@ body{
 }
 
 .nextbtn{
+  cursor: pointer;
   border: none;
   height: 1.8rem;
   width: 3.2rem;
