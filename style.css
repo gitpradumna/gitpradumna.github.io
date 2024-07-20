@@ -265,31 +265,42 @@ body{
     background-color: black;
   }
 
-  .content-right{
+  .content-right {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    gap: 1.5rem;
+}
 
-  }
-  .image-container{
+.image-container {
     border-radius: 1.25rem;
-    /* overflow: hidden; */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 1);
     height: 57vh;
-    
-  }
-  .section-image{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 1px 1px 10px black;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-image {
     border-radius: 1.25rem;
-    object-fit: cover;
     height: 100%;
     width: 100%;
     transition-property: all;
     transition-duration: 0.5s;
-  }
-  .section-image:hover{
+    position: absolute; /* Add this to position images correctly */
+    flex-shrink: 0;
+}
+
+.section-image:hover {
     transform: scale(1.03);
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 1);
-  }
+}
+
   .section-label{
     font-size: 1.8rem;
     font-weight:bolder;
@@ -313,6 +324,9 @@ body{
     .section-title{
         padding-left: 0;
     }
+    .content-right{
+      width: 38%;
+    }
     .image-container{
         margin-top: 2rem;
         height: 65vh;
@@ -322,3 +336,30 @@ body{
     }
     
   }
+.operation{
+  display: flex;
+  gap: 1rem;
+}
+.prebtn{
+  height: 1.8rem;
+  width: 3.2rem;
+  background-color: var(--gray);
+  color: white;
+  border-radius: 0.25rem;
+  border: none;
+}
+.prebtn:hover{
+  background-color:black;
+}
+.nextbtn:hover{
+  background-color: black;
+}
+
+.nextbtn{
+  border: none;
+  height: 1.8rem;
+  width: 3.2rem;
+  background-color: var(--gray);
+  color: white;
+  border-radius: 0.25rem;
+}
