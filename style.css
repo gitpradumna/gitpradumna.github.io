@@ -290,8 +290,8 @@ body{
     border-radius: 1.25rem;
     height: 100%;
     width: 100%;
-    transition-property: all;
-    transition-duration: 0.5s;
+/*     transition-property: all;
+    transition-duration: 0.5s; */
     position: absolute; /* Add this to position images correctly */
     flex-shrink: 0;
 }
@@ -337,7 +337,7 @@ body{
     
   }
 .operation{
-  
+  cursor: pointer;
   display: flex;
   gap: 1rem;
 }
