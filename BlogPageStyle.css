@@ -79,7 +79,7 @@ a{
 .upperpart{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-grow: 1;
     gap: 1rem;
 }
