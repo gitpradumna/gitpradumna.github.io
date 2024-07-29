@@ -87,6 +87,7 @@ a{
     width: 100%;
     height: 150px;
     position: relative;
+    object-fit: contain;
 }
 .card_image{
     width: 100%;
@@ -94,11 +95,13 @@ a{
     object-position: center;
     border-radius: 1rem;
     object-fit: cover;
+   
 }
 .card_image:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition-duration: 0.3s;
-    box-shadow: 0 0 20px rgb(64, 63, 65);
+    /* box-shadow: 0 0 20px rgb(64, 63, 65); */
+    box-shadow: 0 5px 5px rgba(64, 63, 65, 0.649);
 }
 .card_content_container{
     display: flex;
