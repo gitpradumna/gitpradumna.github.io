@@ -163,13 +163,11 @@
                 <p class="news-desc">Sign up for our newsletter</p>
             </div>
 
-            <form class="news-form">
-
-                <input class="news-email" placeholder="Email" />
-                <button class="news-send-button">
+            <form class="news-form" action="/post" method="post">
+                <input class="news-email" name="email" placeholder="Email" required />
+                <button class="news-send-button" type="submit">
                     Send
                 </button>
-
             </form>
 
             <div class="privacy-policy">
