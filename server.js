@@ -27,7 +27,8 @@ app.post('/post', async (req, res) => {
         const user = new userModel({ email }); // Create a new user instance
         await user.save(); // Save the user to the database
         console.log('Email saved:', user);
-        res.send('Email saved Successfully');
+        //res.send('Email saved Successfully');
+        res.sendFile(path.join(__dirname, '/thankyoupage.html'));
     } catch (error) {
         console.error('Error saving email:', error);
         res.status(500).send('Error saving email');
