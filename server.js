@@ -27,12 +27,12 @@ app.get('/', (req, res) => {
 
 // Route to render the signup page (signup.html)
 app.get('/signup', (req, res) => {
-    res.sendFile(path.join(__dirname, 'signup.html'));
+    res.sendFile(path.join(__dirname, './login/signup.html'));
 });
 
 // Route to render the login page (login.html)
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'login.html'));
+    res.sendFile(path.join(__dirname, './login/login.html'));
 });
 
 // Handling signup form submission
@@ -48,7 +48,8 @@ app.post('/signup', async (req, res) => {
             const newUser = new collection({ name: username, password: hashedPassword });
             await newUser.save();  // Save the user in the database
 
-            res.sendFile(path.join(__dirname, 'login.html'));  // Redirect to login page
+            //res.sendFile(path.join(__dirname, './login/login.html'));  // Redirect to login page
+            res.send('User registered successfully');
         }
     } catch (error) {
         console.error('Error during signup:', error);
@@ -67,7 +68,7 @@ app.post('/login', async (req, res) => {
         } else {
             const isMatch = await bcrypt.compare(password, user.password);
             if (isMatch) {
-                res.sendFile(path.join(__dirname, 'home.html'));  // Render home page on successful login
+                res.sendFile(path.join(__dirname, './login/home.html'));  // Render home page on successful login
             } else {
                 res.send('Incorrect password');
             }
@@ -91,7 +92,7 @@ app.post('/post', async (req, res) => {
         const newSubscription = new userModel({ email });
         await newSubscription.save();  // Save the email in the database
 
-        res.sendFile(path.join(__dirname, 'thankyoupage.html'));  // Render thank you page
+        res.sendFile(path.join(__dirname, './thankyou/thankyoupage.html'));  // Render thank you page
     } catch (error) {
         console.error('Error saving email:', error);
         res.status(500).send('Error saving email');
