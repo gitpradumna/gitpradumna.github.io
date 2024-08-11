@@ -87,7 +87,10 @@ app.post('/post', async (req, res) => {
         if (!email) {
             return res.status(400).send('Email is required.');
         }
-
+        const existEmail = await userModel.findOne({ email:email });
+        if(existEmail) {
+            return res.status(400).send('Email already exists. Please choose a different email.');
+        }
         // Create and save email subscription
         const newSubscription = new userModel({ email });
         await newSubscription.save();  // Save the email in the database
