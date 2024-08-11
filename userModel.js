@@ -1,13 +1,16 @@
-const mongoose=require('mongoose');
+const mongoose = require('mongoose');
 
-const userSchema=mongoose.Schema({
-    email:{
-        type:String,
-        required:true
+const userSchema = new mongoose.Schema({
+    email: {
+        type: String,
+        required: true
     }
-},{
-    timestamps:true,
-    versionkey:false
+}, {
+    timestamps: true,
+    versionKey: false,
+    collection: 'email_subscriptions'  // Specify the collection name
 });
 
-module.exports=mongoose.model('user',userSchema)
+const userModel = mongoose.model('EmailSubscription', userSchema);
+
+module.exports = userModel;
